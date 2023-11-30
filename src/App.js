@@ -1,5 +1,5 @@
 import "./App.css";
-import ConfusionMatrix from "./Components/ConfusionMatrix/index.jsx";
+import { ConfusionMatrix } from "./Components/ConfusionMatrix/index.jsx";
 
 function App() {
   const arrayTest = [
@@ -16,7 +16,19 @@ function App() {
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38],
   ];
 
-  const testLabels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+  const testLabels = [
+    "Test 1",
+    "Test 2",
+    "Test 3",
+    "Test 4",
+    "Test 5",
+    "Test 6",
+    "Test 7",
+    "Test 8",
+    "Test 9",
+    "Test 10",
+    "Test 11",
+  ];
 
   return (
     <div className="App" style={{ width: "100%", maxHeight: "200px" }}>

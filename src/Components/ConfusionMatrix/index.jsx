@@ -6,8 +6,8 @@ import { Grid } from "@mui/material";
 // Styles
 import { TableContainer, TableCell, TableLabels, Scale } from "./styles";
 
-const ConfusionMatrix = (props) => {
-  const { labels, data } = props;
+export const ConfusionMatrix = (props) => {
+  const { labels, data, sideBar } = props;
 
   const [maxValue, setMaxValue] = useState(0);
   const [minValue, setMinValue] = useState(0);
@@ -50,26 +50,39 @@ const ConfusionMatrix = (props) => {
             <tr>
               <td />
               {labels.map((col, colIndex) => (
-                <TableLabels key={colIndex}>{col}</TableLabels>
+                <TableLabels
+                  key={colIndex}
+                  sx={{
+                    transformOrigin: "65% 65%",
+                    transform: "rotate(-90deg)",
+                  }}
+                >
+                  {col}
+                </TableLabels>
               ))}
             </tr>
           </tbody>
         </TableContainer>
-        <Scale />
-        <Grid>
-          <Grid
-            item
-            sx={{ display: "flex", alignItems: "start", height: "50%" }}
-          >
-            Max: {maxValue}
-          </Grid>
-          <Grid item sx={{ display: "flex", alignItems: "end", height: "50%" }}>
-            Min: {minValue}
-          </Grid>
-        </Grid>
+        {sideBar && (
+          <>
+            <Scale />
+            <Grid>
+              <Grid
+                item
+                sx={{ display: "flex", alignItems: "start", height: "50%" }}
+              >
+                Max: {maxValue}
+              </Grid>
+              <Grid
+                item
+                sx={{ display: "flex", alignItems: "end", height: "50%" }}
+              >
+                Min: {minValue}
+              </Grid>
+            </Grid>
+          </>
+        )}
       </Grid>
     </Grid>
   );
 };
-
-export default ConfusionMatrix;

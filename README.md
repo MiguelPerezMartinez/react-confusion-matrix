@@ -54,7 +54,7 @@ function MyApp(props) {
   )
 }
 ```
-
+-Use the prop ``sideBar=true`` or ``sideBar=false`` to show or hide the max and mis legend.
 -Also, you can use the minBg, maxBg and labelBg props to modify the colors of the component.
 
 <!-- ## :sparkles: Contribute

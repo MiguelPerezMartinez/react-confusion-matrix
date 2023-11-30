@@ -20,8 +20,7 @@ export const TableCell = styled("td")((props) => {
 
 export const TableLabels = styled("td")({
   backgroundColor: "#ddd",
-  minWidth: "30px",
-  height: "30px",
+  padding: "6px",
 });
 
 export const Scale = styled("div")({
