@@ -53,8 +53,8 @@ export const ConfusionMatrix = (props) => {
                 <TableLabels
                   key={colIndex}
                   sx={{
-                    transformOrigin: "65% 65%",
-                    transform: "rotate(-90deg)",
+                    writingMode: "vertical-lr",
+                    transform: " rotate(180deg)",
                   }}
                 >
                   {col}
