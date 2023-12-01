@@ -2,9 +2,9 @@ import { styled } from "@mui/system";
 
 export const TableContainer = styled("table")({
   color: "darkslategray",
-  width: "100%",
   aspectRatio: "1/1",
   tableLayout: "fixed",
+  width: "100%",
 });
 
 export const TableCell = styled("td")((props) => {
@@ -27,7 +27,7 @@ export const TableCell = styled("td")((props) => {
 export const TableLabels = styled("td")({
   border: "1px solid gray",
   padding: "6px",
-  width: "150px",
+  // width: "150px",
 });
 
 export const Scale = styled("div")({
