@@ -11,18 +11,26 @@ export const ConfusionMatrix = (props) => {
 
   const [maxValue, setMaxValue] = useState(0);
   const [minValue, setMinValue] = useState(0);
+  const [rowMaxValue, setRowMaxValue] = useState([]);
 
   useEffect(() => {
     let max = 0;
     let min = 0;
+    let maxRow = 0;
+    const tmpMaxRow = [];
+
     if (data.length > 0 && data[0].length > 0) {
       data.forEach((row) => {
+        maxRow = 0;
         row.forEach((col) => {
           if (col > max) max = col;
+          if (col > maxRow) maxRow = col;
           if (col < min) min = col;
         });
+        tmpMaxRow.push(maxRow);
       });
     }
+    setRowMaxValue(tmpMaxRow);
     setMaxValue(max);
     setMinValue(min);
   }, [data]);
@@ -40,11 +48,16 @@ export const ConfusionMatrix = (props) => {
             {data.map((row, rowIndex) => (
               <tr key={rowIndex}>
                 <TableLabels>{labels[rowIndex]}</TableLabels>
-                {row.map((col, colIndex) => (
-                  <TableCell key={colIndex} backgroundColor={col / maxValue}>
-                    {col}
-                  </TableCell>
-                ))}
+                {row.map((col, colIndex) => {
+                  return (
+                    <TableCell
+                      key={colIndex}
+                      backgroundColor={col / rowMaxValue[colIndex]}
+                    >
+                      {col}
+                    </TableCell>
+                  );
+                })}
               </tr>
             ))}
             <tr>

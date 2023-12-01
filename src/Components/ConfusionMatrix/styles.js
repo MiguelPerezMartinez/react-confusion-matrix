@@ -2,6 +2,9 @@ import { styled } from "@mui/system";
 
 export const TableContainer = styled("table")({
   color: "darkslategray",
+  width: "100%",
+  aspectRatio: "1/1",
+  tableLayout: "fixed",
 });
 
 export const TableCell = styled("td")((props) => {
@@ -15,12 +18,16 @@ export const TableCell = styled("td")((props) => {
     minHeigth: "10px",
     width: size,
     height: size,
+    justifyContent: "center",
+    alignItems: "center",
+    roll: "gridcell",
   };
 });
 
 export const TableLabels = styled("td")({
-  backgroundColor: "#ddd",
+  border: "1px solid gray",
   padding: "6px",
+  width: "150px",
 });
 
 export const Scale = styled("div")({

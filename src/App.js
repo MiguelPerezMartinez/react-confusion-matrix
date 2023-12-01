@@ -3,7 +3,7 @@ import { ConfusionMatrix } from "./Components/ConfusionMatrix/index.jsx";
 
 function App() {
   const arrayTest = [
-    [33, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3],
+    [3333, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3],
     [3, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 4, 41, 0, 0, 0, 0, 0, 0, 0, 1],
     [0, 1, 0, 30, 0, 6, 0, 0, 0, 0, 1],
@@ -18,7 +18,7 @@ function App() {
 
   const testLabels = [
     "Test 1",
-    "Test 2 asdfasdf asdf as df",
+    "Test 2",
     "Test 3",
     "Test 4",
     "Test 5",
