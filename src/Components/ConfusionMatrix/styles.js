@@ -4,7 +4,6 @@ export const TableContainer = styled("table")({
   color: "darkslategray",
   aspectRatio: "1/1",
   tableLayout: "fixed",
-  width: "100%",
 });
 
 export const TableCell = styled("td")((props) => {
@@ -14,20 +13,21 @@ export const TableCell = styled("td")((props) => {
     backgroundColor: `rgb(20, 146, 230, ${backgroundColor})`,
     padding: 8,
     color: backgroundColor > 0.5 && "white",
-    minWidth: "10px",
-    minHeigth: "10px",
-    width: size,
-    height: size,
+    minWidth: "30px",
+    minHeigth: "30px",
+    width: "50px",
+    height: "50px",
     justifyContent: "center",
     alignItems: "center",
     roll: "gridcell",
+    border: "1px solid gray",
   };
 });
 
 export const TableLabels = styled("td")({
-  border: "1px solid gray",
   padding: "6px",
-  // width: "150px",
+  maxWidth: "200px",
+  border: "1px solid gray",
 });
 
 export const Scale = styled("div")({
