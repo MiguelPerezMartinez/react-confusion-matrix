@@ -1,6 +1,6 @@
 # REACT CONFUSION MATRIX
 
-![Alt text](image.png)
+![image](https://github.com/MiguelPerezMartinez/react-confusion-matrix/assets/71381808/69e65eff-da04-4a50-9b71-1fceae5c67f3)
 
 ## :hammer_and_wrench: Installation
 Install it from npm and include it in your React build process (using [Webpack](http://webpack.github.io/), [Browserify](http://browserify.org/), etc).
